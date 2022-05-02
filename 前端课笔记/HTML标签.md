@@ -120,9 +120,9 @@
    > ```html
    > <form method="get" action="" > 	<!--action：发送出去的地址-->
    > 	<p> 选择其中一个 </p>
-   >         1.第一个<input type="radio" name="name">
-   >         1.第一个<input type="radio" name="name">
-   >         1.第一个<input type="radio" name="name">
+   >         1.第一个<input type="radio" name="name">		<!--name：写相同表示同一个选择问题-->
+   >         1.第二个<input type="radio" name="name">
+   >         1.第三个<input type="radio" name="name">
    >   <input type="submit" value="Submit" />  		<!--提交按键，value：数据值-->
    > </form>
    > ```
