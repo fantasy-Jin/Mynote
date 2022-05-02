@@ -3,16 +3,16 @@
 整体结构
 
 ```html
-<html> //开始标签
+<html> <!--开始标签-->
 <html>
 	<head>
-		<meta charset="utf-8" />  //字符编码避免网页文字乱码
+		<meta charset="utf-8" />  <!--字符编码避免网页文字乱码-->
 		<title>网页的标题</title>
 	</head>
 	<body>
-		//网页的基本内容
+	<!--网页的基本内容-->
 	</body>
-</html> //结束标签
+</html> <!--结束标签-->
 
 ```
 
@@ -47,10 +47,10 @@
  3. 有序列表标签
 
     > ```html
-    > <ol>			  //网页显示
-    >   <li>第一条</li>	//1.第一
-    >   <li>第二条</li>	//2.第二
-    >   <li>第三条</li>	//3.第三
+    > <ol>			  <!--网页显示-->
+    >   <li>第一条</li>	<!--1.第一-->
+    >   <li>第二条</li>	<!--2.第二-->
+    >   <li>第三条</li>	<!--3.第三-->
     > </ol>
     > ```
     >
@@ -94,4 +94,37 @@
      >
      > 2，`<img src="图片路径" title=”图片提示符“>`，即鼠标移到图时显示
 
-6. 
+6. 链接标签a
+
+     >1. 超链接：`<a href="网址">网站名</a>`
+     >2. 锚点：`<a href="#id">文字</a>`；id指某个标签的id名字，运用于：页面目录，回到顶部
+     >3. 打电话或发邮件：`<a href="tel:电话号码">文字</a>`；`<a href="mailto:邮箱地址">文字</a>`
+     >4. 协议限定符：使用js
+     >
+     >属性：`target=_blank`点击链接在新页面弹出
+
+7. 表单
+
+   > 信息输入框
+   >
+   > ```html
+   > <form method="get" action="" > 	<!--action：发送出去的地址-->
+   >  	name: <input type="text" name="name" />		 <!--文本输入框，name：数值内容-->
+   > 	password: <input type="password" name="password" />	<!--密码输入框，name：数值内容-->
+   >   <input type="submit" value="Submit" />  			<!--提交按键，value：数据值-->
+   > </form>
+   > ```
+   >
+   > 单选框
+   >
+   > ```html
+   > <form method="get" action="" > 	<!--action：发送出去的地址-->
+   > 	<p> 选择其中一个 </p>
+   >         1.第一个<input type="radio" name="name">
+   >         1.第一个<input type="radio" name="name">
+   >         1.第一个<input type="radio" name="name">
+   >   <input type="submit" value="Submit" />  		<!--提交按键，value：数据值-->
+   > </form>
+   > ```
+   >
+   > 
