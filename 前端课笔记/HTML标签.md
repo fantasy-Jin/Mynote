@@ -109,9 +109,9 @@
    >
    > ```html
    > <form method="get" action="" > 	<!--action：发送出去的地址-->
-   >  	name: <input type="text" name="name" />		 <!--文本输入框，name：数值内容-->
+   > 	name: <input type="text" name="name" />		 <!--文本输入框，name：数值内容-->
    > 	password: <input type="password" name="password" />	<!--密码输入框，name：数值内容-->
-   >   <input type="submit" value="Submit" />  			<!--提交按键，value：数据值-->
+   > <input type="submit" value="Submit" />  			<!--提交按键，value：数据值-->
    > </form>
    > ```
    >
@@ -120,11 +120,110 @@
    > ```html
    > <form method="get" action="" > 	<!--action：发送出去的地址-->
    > 	<p> 选择其中一个 </p>
-   >         1.第一个<input type="radio" name="name" value:"one">	<!--name相同表示同个选择问题-->
-   >         1.第二个<input type="radio" name="name" value:"two">
-   >         1.第三个<input type="radio" name="name" value:"three">
-   >   <input type="submit" value="Submit" />  		<!--提交按键，value：数据值-->
+   > 1.第一个<input type="radio" name="name" value:"one">	<!--name相同表示同个选择问题-->
+   > 1.第二个<input type="radio" name="name" value:"two">
+   > 1.第三个<input type="radio" name="name" value:"three">
+   > <input type="submit" value="Submit" />  		<!--提交按键，value：数据值-->
    > </form>
    > ```
    >
-   > 
+   > 副选框
+   >
+   > ```html
+   > <input type="checkobx" name="题目" value:"提交的数值">  	<!--大致与上面相同-->
+   > ```
+   >
+   > 选项下拉菜单
+   >
+   > ```html
+   > <select name="">
+   >  <option>选项一</option>
+   >   <option>选项二</option>
+   > </select>
+   >```
+   > 表单添加默认选项：标签后加入`checked="checked"`
+   >  
+   >   
+
+------
+
+# CSS初级
+
+## 引入CSS
+
+> 1. 行间样式
+>
+>    ```html
+>    <div style="css定义内容">   
+>    </div>
+>    ```
+>
+> 2. 页面级CSS
+>
+>    在头部标签`<head>`下加入
+>
+>    ```html
+>    <style type="text/css">
+>        <!--css定义内容-->	
+>    </style>
+>    ```
+>
+> 3. 外部CSS文件
+>
+>    新加一个文件后缀为.CSS
+>
+>    在头部标签`<head>`下加入
+>
+>    ```html
+>    <link rel="stylesheet" type="text/css" href="CSS文件位置"/>
+>    ```
+>
+>    
+
+## CSS选择器
+
+>1. `id`，在div标签加入id名
+>
+>```html
+><!--id创建-->
+><div id="填id名"></div>
+><!--css定义,引入css页面填写-->
+>#id名{   css定义内容   }
+>```
+>
+>2. `class`，在div标签加入class名
+>
+>```html
+><!--class创建-->
+><div class="填calss名"></div>
+><!--css定义,引入css页面填写-->
+>#id名{   css定义内容   }
+>```
+>
+>3. `标签选择`
+>
+>```html
+><!--css定义,引入css页面填写-->
+>标签名{   css定义内容 }
+>```
+>4. `属性`，如[id]，[class]，[id="123"]...
+>
+>  ```html
+>  <!--css定义,引入css页面填写-->
+>  [属性]{   css定义内容 }
+>  ```
+>
+>5. `通配符`，对所以标签都生效
+>
+>  ```html
+>  <!--css定义,引入css页面填写-->
+>  #{   css定义内容 }
+>  ```
+>
+>  
+
+> CSS选择器的优先级
+>
+> `!import`>`行间样式`>`id`>`class`=`属性`>`标签选择`>`通配符`
+>
+> `!import`在CSS定义内容后可加上
