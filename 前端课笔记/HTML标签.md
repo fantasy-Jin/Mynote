@@ -107,45 +107,45 @@
 
 7. **表单**
 
-   > 信息输入框
-   >
-   > ```html
-   > <form method="get" action="" > 	<!--action：发送出去的地址-->
-   > 	name: <input type="text" name="name" />		 <!--文本输入框，name：数值内容-->
-   > 	password: <input type="password" name="password" />	<!--密码输入框，name：数值内容-->
-   > <input type="submit" value="Submit" />  			<!--提交按键，value：数据值-->
-   > </form>
-   > ```
-   >
-   > 单选框
-   >
-   > ```html
-   > <form method="get" action="" > 	<!--action：发送出去的地址-->
-   > 	<p> 选择其中一个 </p>
-   > 1.第一个<input type="radio" name="name" value:"one">	<!--name相同表示同个选择问题-->
-   > 1.第二个<input type="radio" name="name" value:"two">
-   > 1.第三个<input type="radio" name="name" value:"three">
-   > <input type="submit" value="Submit" />  		<!--提交按键，value：数据值-->
-   > </form>
-   > ```
-   >
-   > 副选框
-   >
-   > ```html
-   > <input type="checkobx" name="题目" value:"提交的数值">  	<!--大致与上面相同-->
-   > ```
-   >
-   > 选项下拉菜单
-   >
-   > ```html
-   > <select name="">
-   >  <option>选项一</option>
-   >   <option>选项二</option>
-   > </select>
-   >```
-   > 表单添加默认选项：标签后加入 `checked="checked"`
-   >  
-   >   
+   - 信息输入框
+
+       > ```html
+       > <form method="get" action="" > 	<!--action：发送出去的地址-->
+       > 	name: <input type="text" name="name" />		 <!--文本输入框，name：数值内容-->
+       > 	password: <input type="password" name="password" />	<!--密码输入框，name：数值内容-->
+       > <input type="submit" value="Submit" />  			<!--提交按键，value：数据值-->
+       > </form>
+       > ```
+
+   - 单选框
+
+       > ```html
+       > <form method="get" action="" > 	<!--action：发送出去的地址-->
+       > 	<p> 选择其中一个 </p>
+       > 1.第一个<input type="radio" name="name" value:"one">	<!--name相同表示同个选择问题-->
+       > 1.第二个<input type="radio" name="name" value:"two">
+       > 1.第三个<input type="radio" name="name" value:"three">
+       > <input type="submit" value="Submit" />  		<!--提交按键，	value：数据值-->
+       > </form>
+       > ```
+
+   - 副选框
+
+       > ```html
+       > <input type="checkobx" name="题目" value:"提交的数值">  	<!--大致与上面相同-->
+       > ```
+
+   - 选项下拉菜单
+
+       > ```html
+       > <select name="">
+       >  <option>选项一</option>
+       >   <option>选项二</option>
+       > </select>
+       >```
+       > 表单添加默认选项：标签后加入 `checked="checked"`
+       >  
+
 
 ------
 
@@ -290,9 +290,9 @@
     >}
     >```
 
-##**CSS选择器优先级**
+## **CSS选择器的优先级**
 
--  > `!import `> `行间样式` > `id` > `class` =`属性` > `标签选择` > `通配符`
+- > `!import `> `行间样式` > `id` > `class` =`属性` > `标签选择` > `通配符`
    >
    > `!import`  在CSS定义内容后可加上
    >
@@ -320,15 +320,23 @@
   >特点：内容决定元素所占位置，不可以通过css改变宽高
   >
   >行内元素标签：`span`	`strong`	`a`	`em`	`del`
+  >
+  >CSS默认：`display: inline;`
+  >
+  >凡是带有 inline 的元素，都有文字特征
 
 - **块类元素**
 
   > 特点：独占一行，可以通过css改变宽高
   >
   > 块内元素标签：`div`   `p`   `ul`   `li`   `ol`  `form`  `address`
+  >
+  > CSS默认：`disply: block;`
 
 - **行级块元素**
 
   > 特点：内容决定改变大小，可以通过css改变宽高
   >
   > 行级块元素标签：`img`
+  >
+  > CSS默认：`disply: inline-block;`
