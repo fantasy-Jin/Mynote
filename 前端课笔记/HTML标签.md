@@ -1,4 +1,4 @@
-# HTML标签
+# HTML初级
 
 
 
@@ -311,6 +311,67 @@
 
 
 
+## CSS语法
+
+1. 基本样式
+
+   > ```css
+   > 选择器{
+   >         属性名1：属性值1;
+   >         属性名2：属性值2;
+   >         属性名3：属性值3;
+   > }
+   > /*例如定义一个div*/
+   > div{ 
+   >     width:100px; 
+   >     height:100px; 
+   >     background:red; 
+   > }
+   > ```
+
+2. 文字定义
+
+   >```css
+   >font-size:16px;     /* 调整文字大小 */
+   >font-weight:bold;	/* 调整文字粗细  可选属性，默认是 "normal"，"bold" 是加粗，可直接写数值: "100-900" 之间。*/
+   >font-style:normal;	/* 属性值："italic" 斜体的字体样式, "oblique" 倾斜的字体样式*/
+   >font-family:字体名称;	/* 可以修改显示的字体  */
+   >/*字体颜色定义，三种方法*/
+   >color:rgb(0,0,0);	/* 红，绿，蓝 三个颜色的值 0-255*/
+   >color:#000000;		/* 可以分开00-00-00，代表红，绿，蓝的值，用16进制数表示  */
+   >color:red;			/*直接所以英文颜色名字*/	
+   >```
+
+
+
+3. 段落文字定义
+
+   >```css
+   >/* 段落文字水平居中 */
+   >text-align:center;	/* 可以选属性，靠左 "left"，靠右："right" */
+   >line-height:10px;	/* 行高，行间距 */
+   >text-indent:2em;	/* 首行缩进两个字符大小；1 em= 1 font-size   */
+   >text-decoration:line-through;	/* 删除线 */
+   >text-decoration:underline;	/* 下划线 */
+   >text-decoration:overline;	/* 上划线 */
+   >```
+
+4. 边界线
+
+   > ```css
+   > /* 边框宽度 | 边框样式 | 边框颜色 */
+   > border:1px dashed green;	/* "dashed" 虚线；"solid" 实线 */
+   > /*可以分开4个边角定义*/
+   > /* 例如左边left,可选 tiop，right，bottom */
+   > border-left:1px dashed green;
+   > ```
+   >
+   > 
+
+
+
+
+
 ## 元素的类型
 
 每一个元素都有默认的 `display` 属性值；
@@ -340,3 +401,4 @@
   > 行级块元素标签：`img`
   >
   > CSS默认：`disply: inline-block;`
+
