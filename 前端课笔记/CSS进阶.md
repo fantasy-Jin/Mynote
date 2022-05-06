@@ -53,6 +53,8 @@ color: red
 
 ### margin塌陷
 
+![image-20220506133652940](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220506133652940.png)
+
 > - 父子关系的子元素里，让子元素距离父元素的顶部50px,如果直接只给子元素`margin-top：50px;`子元素并没有距离父元素顶部50px，而是让父元素距离顶部有了50px的距离，也就是父元素的顶棚对子元素来说`没有作用`，相当于塌陷下来了，这就是所谓的margin塌陷。
 >
 > - 解决方式
@@ -61,6 +63,8 @@ color: red
 >   方案2：给父元素添加样式触发BFC
 
 ### margin合并
+
+![image-20220506133627068](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220506133627068.png)
 
 >- 两个兄弟元素，一个设置下边距为50px,一个设置上边距为30px；
 >
