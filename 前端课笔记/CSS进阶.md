@@ -53,7 +53,7 @@ color: red
 
 ### margin塌陷
 
-![image-20220506133652940](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220506133652940.png)
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220506133652940.png" alt="image-20220506133652940" style="zoom: 80%;" />
 
 > - 父子关系的子元素里，让子元素距离父元素的顶部50px,如果直接只给子元素`margin-top：50px;`子元素并没有距离父元素顶部50px，而是让父元素距离顶部有了50px的距离，也就是父元素的顶棚对子元素来说`没有作用`，相当于塌陷下来了，这就是所谓的margin塌陷。
 >
@@ -64,7 +64,7 @@ color: red
 
 ### margin合并
 
-![image-20220506133627068](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220506133627068.png)
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220506133627068.png" alt="image-20220506133627068" style="zoom:80%;" />
 
 >- 两个兄弟元素，一个设置下边距为50px,一个设置上边距为30px；
 >
@@ -124,5 +124,48 @@ float:left;		/* 向左浮动 */
   ```
   
   
+
+## CSS补充
+
+- 单行文本超出容器截断文字用`...`省略
+
+  ```css
+  white-space: nowrap;	 /* 文本强制在一行上显示 */
+  overflow: hidden;	/*对超出内容进行裁减 */
+  text-overflow:ellipsis;	/* 	显示省略符号...来代表被修剪的文本*/
+  ```
+
   
+
+- 背景图片
+
+  ```css
+  div{
+      background-image:url(图片路径);		/* 插入背景图片 */
+      background-repeat:no-repeat;	/* 如果图片小，默认下，铺满容器，no-repeat取消重复 */
+      background-position:center;		/* 图片位置 */
+      /*
+      图片位置可用值：
+  	left top
+      left top
+      ....
+      =====
+      x% y%
+      水平垂直位置
+      */
+  }
+  ```
   
+
+- 嵌套问题
+
+  行级元素只能嵌套行级元素
+
+  块级元素可以嵌套任何元素
+
+  >特殊注意：
+  >
+  >`p`标签不能嵌套`div`标签
+  >
+  >`a`标签不能嵌套`a`标签
+
