@@ -1,4 +1,4 @@
-# 淘宝网（静态）HTML+CSS
+# 淘宝网（静态）HTML+CSS 技术笔记要点
 
 ##  重置样式
 
@@ -160,3 +160,48 @@ background-image: linear-gradient(-90deg, red, yellow);
 - 直接在ul中设置"text-align: center;", 再将li元素的display设置为inline-block，就可以实现居中显示。
 
 ## 表格布局
+
+- `table`标签
+
+  ```css
+  /* 表头为th；普通单元格为td；行为tr */
+  <table border="1">
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>80</td>
+    </tr>
+  ```
+
+  效果图：<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220515112224963.png" alt="image-20220515112224963" style="zoom:50%;" />
+
+ -  淘宝实用
+
+    ```css
+    /* 边框模式---合并的模式：即两个单元格之间的的边框只需要显示一个就行 */
+    table {
+        border-collapse: collapse;  
+    }
+    th,td {
+        padding: 0;
+    }
+    ```
+
+## .webp（图片格式）
+
+- .webp 是谷歌开发的一种图片格式，只能用于在网站中显示，其体积相较于普通的图片格式小得多，且图片的清晰度不变，目前   IE不支持、火狐在65以上的版本支持，谷歌支持。
+
+## 词强制换行
+
+```css
+/* 在空格的地方强制换行 */
+word-break: keep-all; 
+```
+

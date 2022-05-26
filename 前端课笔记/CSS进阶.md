@@ -16,7 +16,10 @@
     position:absolute;
     left:0; top:0; right:0; bottom:0;
    	margin:auto; /*实现绝对定位元素的居中(上下左右均0位置定位；margin: auto)*/
-
+	/* 子绝父相的居中*/
+    left:50%;
+    top:50%;
+    transform：translate(-50%，-50%); /* 让子盒子往左+往上走自己的一半 */
 }
 ```
 
@@ -156,7 +159,6 @@ float:left;		/* 向左浮动 */
   }
   ```
   
-
 - 嵌套问题
 
   行级元素只能嵌套行级元素
