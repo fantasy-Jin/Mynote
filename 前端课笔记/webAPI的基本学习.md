@@ -35,3 +35,31 @@
   ```
 
   <img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/0d429a429c4b10f6ba024de35a73da88b39e4b6e76b0f7bd95697db1ceaab0b5.gif" alt="0d429a429c4b10f6ba024de35a73da88b39e4b6e76b0f7bd95697db1ceaab0b5" style="zoom:200%;" />
+
+
+
+### 获取DOM元素
+
+- CSS选择器 	匹配到第一个元素，返回一个HTMLElement对象
+
+  ```javascript
+  //语法
+  document.querySelector('CSS选择器')
+  ```
+
+- 匹配多个选择器，返回NodeList对象集合，得到是一个伪数组
+
+  ```javascript
+  document.querySelectorAll('CSS选择器')
+  ```
+
+- 其他方法
+
+  ```javascript
+  document.getElementByid('id名')
+  document.getElementByTagName('标签名')
+  document.getElementByClassName('类名')
+  ```
+
+  
+
