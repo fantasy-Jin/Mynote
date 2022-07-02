@@ -152,6 +152,10 @@
 
   
 
+----
+
+
+
 ### 事件
 
 > 事件是在编程时系统内发生的动作或者发生的事情，比如用户在网页上单击一个按钮
@@ -205,9 +209,17 @@ btn.addEventListener('click',function(){
 
   
 
-#### 事件类型![image-20220702092821996](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220702092821996.png)
+#### 事件类型
+
+
+
+#### ![image-20220702092821996](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220702092821996.png)
 
  
+
+---
+
+
 
 ### 高阶函数
 
@@ -251,6 +263,10 @@ let result=counter(1,2)
   })
   ```
 
+----
+
+
+
 ### 环境变量
 
 > 环境对象指的是函数内部特殊的变量 this ，它代表着当前函数运行时所处的环境
@@ -259,6 +275,10 @@ let result=counter(1,2)
 - 函数的调用方式不同，this 指代的对象也不同
 - 【谁调用， this 就是谁】 是判断 this 指向的粗略规则
 -  直接调用函数，其实相当于是 window.函数，所以 this 指代 window
+
+----
+
+
 
 ### 编程思想
 
@@ -298,6 +318,10 @@ let result=counter(1,2)
 
 
 
+---
+
+
+
 ### DOM结点
 
 > DOM树里每一个内容都称之为节点
@@ -321,3 +345,111 @@ let result=counter(1,2)
   
 
 #### 结点的查找
+
+结点的关系：父节点，子节点，兄弟节点
+
+- 父节点的查找
+
+  使用`parentNode`属性，返回最近一级的父节点，找不到返回**null**
+
+  语法：`子元素.parentNode`
+
+- 子结点的查找
+
+  `childNodes` - 获得所有的子节点，包括文本节点（空格、换行）、注释节点等
+
+  `chilrden` :star:  -获得所有元素节点，返回的还是一个伪数组
+
+- 兄弟结点的查找
+
+  `nextElementSibling`  查找下一个兄弟结点
+
+  `previousElementSibling`  查找上一个兄弟节点
+
+#### 结点的增加
+
+>一般情况下，我们新增节点，按照如下操作
+>
+>1创建一个新的节点
+>
+>2把创建的新的节点放入到指定的元素内部
+
+- 创建结点
+
+  ```javascript
+  documnet.createElement('标签名')
+  ```
+
+- 追加结点
+
+  ```javascript
+  //插入父元素的最后
+  父元素.appendChild(要插入的元素)
+  //插到某个子元素的前面
+  父元素.insertBefore(要插入的元素,在哪个元素的前面)
+  ```
+
+  
+
+#### 结点的克隆
+
+>cloneNode会克隆出一个跟原标签一样的元素，括号内传入布尔值
+>若为true，则代表克隆时会包含后代节点一起克隆
+>若为false，则代表克隆时不包含后代节点
+>默认为false
+
+**语法**：`元素.cloneNode(布尔值)`
+
+#### 结点的删除
+
+>删除节点和隐藏节点（display:none） 有区别的： 隐藏节点还是存在的，但是删除，则从html中删除节点在 JavaScript 原生DOM操作中，要删除元素必须通过父元素删除
+
+**语法**：`父元素.removeChild(要删除的元素)`
+
+------
+
+
+
+###  重绘和回流
+
+浏览器进行界面渲染
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220702104807814.png" alt="image-20220702104807814" style="zoom:150%;" />
+
+- 解析（Parser）HTML，生成DOM树(DOM Tree)
+- 同时解析（Parser） CSS，生成样式规则 (Style Rules)
+- 根据DOM树和样式规则，生成渲染树(Render Tree)
+- 进行布局 Layout(回流/重排):根据生成的渲染树，得到节点的几何信息（位置，大小）
+- 进行绘制 Painting(重绘): 根据计算和获取的信息进行整个页面的绘制
+- Display: 展示在页面上
+
+#### 回流(重排)
+
+>当 Render Tree 中部分或者全部元素的尺寸、结构、布局等发生改变时，浏览器就会重新渲染部分或全部文档的过程称为回流，简单理解影响到布局了，就会有回流
+
+会导致回流的操作
+
+- 页面的首次刷新
+- 浏览器的窗口大小发生改变
+- 元素的大小或位置发生改变
+- 改变字体的大小
+- 内容的变化（如：input框的输入，图片的大小）
+- 激活css伪类 （如：:hover）
+- 脚本操作DOM（添加或者删除可见的DOM元素）
+
+#### 重绘
+
+>由于节点(元素)的样式的改变并不影响它在文档流中的位置和文档布局时(比如：color、background-color、
+>outline等), 称为重绘
+
+**注：**重绘不一定引起回流，而回流一定会引起重绘。
+
+练习：
+
+```java
+let s = document.body.stlye
+	s.padding = '2px' //重排 + 重绘
+	s.border = '1px solid red' // 重排 + 重绘
+    s.color = 'red'//重绘
+    s.backgroundColor = '#666' //重绘
+    s.fontSize= "14px" // 重排 + 重绘
