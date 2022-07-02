@@ -63,3 +63,91 @@
 
   
 
+### 设置和修改DOM元素
+
+- 修改标签文本内容
+
+  ```javascript
+  //语法：
+  元素.innerText='' 
+  //只能识别内容，不能解释标签
+  //可以解析标签 即：
+  元素.innerHTML='<h3>会对html标签进行解析</h3>' 
+  ```
+
+  
+
+### 设置与修改DOM元素的属性
+
+- 语法：`对象.属性=值`，最常见的属性比如： **href**、**title**、**src** 等
+
+  ```javascript
+  //例子
+  let pic =document.querySelector('img')
+  pic.src='./images/pic2.jpg'
+  ```
+
+  
+
+- 通过**style**修改CSS属性 
+
+  ```javascript
+  let box =document.querySelector('div')
+  box.style.width='300px'
+  box.style.paddingLeft ='300px'
+  //注：有链接-符号的需要转换为小驼峰命名法
+  //即：padding-left-->paddingLeft
+  ```
+
+- 修改标签类名
+
+  ```javascript
+  元素.clssName='新类名'
+  //注：直接使用 className 赋值会覆盖以前的类名
+  //保留可写
+  元素.clssName='旧类名 新类名'
+  ```
+
+- 通过**clssList**操作css类名
+
+  ```javascript
+  //增加一个类名
+  元素.classList.add('类名')
+  //删除一个类
+  元素.classList.remove('类名')
+  //切换一个类,存在就删除,不存在就增加
+  元素.classList.toggle('类名')
+  ```
+
+  
+
+### 修改表单属性
+
+- 作用：表单很多情况，也需要修改属性，比如点击眼睛，可以看到密码，本质是把表单类型转换为文本框
+
+- 获取：DOM对象.属性名；设置：DOM对象.属性名=新值
+
+  ```javascript
+  表单.value='用户名'
+  表单.type='password'
+  ```
+
+- 表单属性中添加就有效果,移除就没有效果,一律使用布尔值表示 如果为true 代表添加了该属性 如果是false 代表移除了该属性
+  比如： disabled、checked、selected
+
+### 定时器-**setInterval()** 间歇函数
+
+- 开启定时器
+
+  ```javascript
+  setInterval(函数，间隔时间) //时间也毫秒为单位，1秒==1000ms
+  ```
+
+- 关闭定时器
+
+  ```javascript
+  let timer =setInterval(函数，间隔时间)
+  clearInterval(timer)
+  ```
+
+  
