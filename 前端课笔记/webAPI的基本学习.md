@@ -446,10 +446,56 @@ let result=counter(1,2)
 
 练习：
 
-```java
+```javascript
 let s = document.body.stlye
-	s.padding = '2px' //重排 + 重绘
-	s.border = '1px solid red' // 重排 + 重绘
-    s.color = 'red'//重绘
-    s.backgroundColor = '#666' //重绘
-    s.fontSize= "14px" // 重排 + 重绘
+s.padding = '2px' //重排 + 重绘
+s.border = '1px solid red' // 重排 + 重绘
+s.color = 'red'//重绘
+s.backgroundColor = '#666' //重绘
+s.fontSize= "14px" // 重排 + 重绘
+```
+
+
+
+----
+
+### 事件高级
+
+#### 事件对象
+
+> 内容：事件对象是个对象，这个对象里有事件触发时的相关信息
+>
+> 例如：鼠标点击事件中，事件对象就存了鼠标点在哪个位置等信息
+
+获取方法：
+
+- 在事件绑定的回调函数的第一个参数就是事件对象
+
+- 一般命名为 even 、ev 、e
+
+  ```javascript
+  元素.addEventListener('click',function(e){
+      //e就是事件对象
+  })
+  ```
+
+  
+
+常用事件对象的属性
+
+- `type` ：获取当前事件类型
+- `clientX` / `clientY` ：获得光标相对于浏览器可见窗口左上角的位置
+- `offsetX` / `offsetY` :   获取光标相对于当前DOM元素左上角的位置
+- `key` ：用户按下的键盘的值，现在不提倡用 **keyCode**
+
+#### 事件流
+
+> 事件流指的是事件完整执行过程的流动路径，两个阶段：事件捕获和事件冒泡
+
+
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220703184458601.png" style="zoom: 200%;" />
+
+- 说明：假设页面里有个div，当触发事件时，会经历两个阶段，分别是捕获阶段、冒泡阶段
+
+- 简单来说：捕获阶段是 从父到子 冒泡阶段是从子到父
