@@ -556,3 +556,118 @@ s.fontSize= "14px" // 重排 + 重绘
 
 - **实现：**`事件对象.target `可以获得真正触发事件的元素
 
+---
+
+### 滚动事件
+
+>  作用：很多网页需要检测用户把页面滚动到某个区域后做一些处理， 比如固定导航栏，比如返回顶部
+
+**事件名** `scroll`
+
+```javascript
+//可以给window或document添加滚动事件来监听整个页面
+window.addEventListener('scroll',function(){
+    //要执行的操作
+})
+```
+
+### 加载事件 
+
+####  load 事件
+
+- 加载外部资源（如图片、外联CSS和JavaScript等）加载完毕时触发的事件
+- 为什么要学？
+  - 有些时候需要等页面资源全部处理完了做一些事情
+  - 老代码喜欢把 script 写在 head 中，这时候直接找 dom 元素找不到
+
+-  事件名：`load`
+
+-  监听页面所有资源加载完毕：
+
+  - 给 window 添加 load 事件
+
+    ```javascript
+    window.addEventListener('load',function(){
+        //要执行的操作
+    })
+    ```
+
+-  注意：不光可以监听整个页面资源加载完毕，也可以针对某个资源绑定load事件
+
+#### DOMContentLoaded
+
+- 当初始的 HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而**无**需等待样式表全加载
+
+- 事件名：`DOMContentLoaded`
+
+-  监听页面DOM加载完毕：
+
+  -  给 document 添加 DOMContentLoaded 事件
+
+    ```javascript
+    document.addEventListener('DOMContentLoaded',function(){
+        //要执行的操作
+    })
+    ```
+
+    
+
+---
+
+### 元素大小和位置
+
+**三大家族**
+
+- scroll家族
+- offest家族
+- client家族
+
+#### scroll家族
+
+> 作用：检测页面滚动的距离
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220710212619434.png" alt="image-20220710212619434" style="zoom:200%;" />
+
+- 获取宽高
+
+  -  获取元素的**内容总宽高（不包含滚动条）**返回值不带单位
+  -  scrollWidth和scrollHeight
+
+- 获取位置（属性可修改）
+
+  - 获取元素内容往左、往上滚出去看不到的距离
+  -  scrollLeft和scrollTop
+
+  ```javascript
+  div.addEventListener('scroll',function(){
+      console.log(this.scrollTop)
+  })
+  ```
+
+  注：`document.documentElement` ：HTML 文档返回对象为HTML元素
+
+
+
+#### offest家族
+
+![image-20220710213109240](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220710213109240.png)
+
+- 获取宽高
+  -  获取元素的自身宽高、包含元素自身设置的宽高、padding、border
+  -  offsetWidth和offsetHeight
+- 获取位置（只读，不可修改）
+  - 获取元素距离自己定位父级元素的左、上距离
+
+####  client家族
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220710213252589.png" alt="image-20220710213252589" style="zoom:150%;" />
+
+- 获取宽高
+  - 获取元素的可见部分宽高（不包含边框，滚动条等）
+  -  clientWidth和clientHeight
+- 位置
+  -  clientLeft和clientTop 注意是只读属性
+
+`resize`事件
+
+- 改变窗口大小的时候触发的事件，类似css3媒体查询
