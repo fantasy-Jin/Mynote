@@ -578,7 +578,7 @@ window.addEventListener('scroll',function(){
 - 加载外部资源（如图片、外联CSS和JavaScript等）加载完毕时触发的事件
 - 为什么要学？
   - 有些时候需要等页面资源全部处理完了做一些事情
-  - 老代码喜欢把 script 写在 head 中，这时候直接找 dom 元素找不到
+  - 老代码喜欢把  script  写在  head  中，这时候直接找  dom  元素找不到
 
 -  事件名：`load`
 
@@ -631,7 +631,7 @@ window.addEventListener('scroll',function(){
 - 获取宽高
 
   -  获取元素的**内容总宽高（不包含滚动条）**返回值不带单位
-  -  scrollWidth和scrollHeight
+  -  scrollWidth 和 scrollHeight
 
 - 获取位置（属性可修改）
 
@@ -654,7 +654,7 @@ window.addEventListener('scroll',function(){
 
 - 获取宽高
   -  获取元素的自身宽高、包含元素自身设置的宽高、padding、border
-  -  offsetWidth和offsetHeight
+  -  offsetWidth 和 offsetHeight
 - 获取位置（只读，不可修改）
   - 获取元素距离自己定位父级元素的左、上距离
 
@@ -671,3 +671,229 @@ window.addEventListener('scroll',function(){
 `resize`事件
 
 - 改变窗口大小的时候触发的事件，类似css3媒体查询
+
+---
+
+### Window对象
+
+#### BOM
+
+> 浏览器对象模型
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220713111536299.png" alt="image-20220713111536299" style="zoom:200%;" />
+
+- window 是浏览器内置的全局对象，我们所学习的 web apis 的知识内容都是基于 window 对象实现的
+
+- window 对象下包含了 `navigator` 、`location` 、`doucment`   `history` 、 `srceen` 5个属性，即 BOM
+
+- document 是实现 DOM 的基础，它其实是依附于 window 的属性
+
+- 依附于 window 对象的所有属性和方法，使用时可以省略 window
+
+  
+
+#### 定时器-延时函数
+
+>  JavaScript 内置的一个用来让代码延迟执行的函数，叫 setTimeout
+
+语法：`setTimeout(回调函数,等待的毫秒数)`
+
+**setTimeout** 仅执行一次，简单来说把一段代码延迟执行
+
+清除延时函数语法 ：`clearTimeout(延时函数的id)`
+
+结合函数的递归可以实现 setInterval 间歇函数 一样的功能
+
+```javascript
+function myInterval(){
+    let d=new date();
+    //写入页面
+    clock.innertext=d.toLocaleString();
+    //调用自己 一直循环，倒计时效果
+    setTimeout(myInterval,1000);  
+}
+myInterval();
+```
+
+
+
+#### JS执行机制 （面试）:star:
+
+>JavaScript 语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。。这是因为 Javascript 这
+>门脚本语言诞生的使命所致——JavaScript 是为处理页面中用户的交互，以及操作 DOM 而诞生的。比
+>如我们对某个 DOM 元素进行添加和删除操作，不能同时进行。 应该先进行添加，之后再删除。
+
+> 单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。这样所导致的问
+> 题是： 如果 JS 执行的时间过长，这样就会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉。
+
+同步和异步
+
+>为了解决这个问题，利用多核 CPU 的计算能力，HTML5 提出 Web Worker 标准，允许
+>JavaScript 脚本创建多个线程。于是，JS 中出现了同步和异步。
+
+- 同步
+
+  - 前一个任务执行完才执行后一个任务，程序执行的顺序和代码排列顺序一样
+
+- 异步
+
+  - 执行一个某个任务费很长时间，在做这个任务的同时，还可以去处理其他的任务
+
+    比如：做饭时，等水开的期间可以去其他事，比如切菜
+
+- 他们的本质区别： 这条流水线上各个流程的执行顺序不同。
+
+---
+
+
+
+- 同步任务
+
+  - 同步任务都在主线程上执行，形成一个执行栈。
+
+- 异步任务
+
+  - JS 的异步是通过回调函数实现的
+
+  - 一般来说异步任务有以下三种类型
+
+    1、普通事件，如 click、resize 等
+    2、资源加载，如 load、error 等
+    3、定时器，包括 setInterval、setTimeout 等
+
+  - 异步任务相关会添加的任务队列（消息队列）中
+
+---
+
+**执行机制**
+
+1. 先执行执行栈里面的同步任务
+2. 异步任务放在消息队列中
+3. 一旦执行栈的执行任务完毕，系统会依次读取消息队列里的异步任务，被读取的异步任务
+   结束等待状态，进入执行栈，开始执行
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220713115651765.png" alt="image-20220713115651765" style="zoom:150%;" />
+
+**事件循环**（event loop）
+
+> 由于主线程不断的重复获得任务、执行任务、再获取任务、再执行，所以这种机制被称为事件循环（ event loop）
+
+
+
+![image-20220713115913074](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220713115913074.png)
+
+----
+
+#### location对象
+
+> location 的数据类型是对象，它拆分并保存了 URL 地址的各个组成部分
+
+ **常用属性和方法：**
+
+-  href 属性获取完整的 URL 地址，对其赋值时用于地址的跳转
+-  search 属性获取地址中携带的参数，符号 ？后面部分
+-  hash 属性获取地址中的啥希值，符号 # 后面部分
+-  reload 方法用来刷新当前页面，传入参数 true 时表示强制刷新
+
+语法：`loaction.属性`  `loactiom.方法()`
+
+
+
+#### navigator对象
+
+> navigator的数据类型是对象，该对象下记录了浏览器自身的相关信息
+
+ 常用属性和方法： 通过 userAgent 检测浏览器的版本及平台
+
+```java
+// 检测 userAgent（浏览器信息）
+!(function () {
+const userAgent = navigator.userAgent
+// 验证是否为Android或iPhone
+const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+// 如果是Android或iPhone，则跳转至移动站点
+if (android || iphone) {
+location.href = 'http://m.itcast.cn'
+}
+})()
+```
+
+
+
+####  histroy对象
+
+> history 的数据类型是对象，该对象与浏览器地址栏的操作相对应，如前进、后退、历史记录等
+
+
+
+| history对象和方法 | 作用                                    |
+| ----------------- | --------------------------------------- |
+| back()            | 可以后退功能                            |
+| forward()         | 可以前进功能                            |
+| go(参数)          | 前进，后退功能，参数决定，-1后退，1前进 |
+
+
+
+#### 本地存储
+
+>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在
+>本地存储大量的数据，HTML5规范提出了相关解决方案
+
+1. 数据存储在用户浏览器中
+2. 设置、读取方便、甚至页面刷新不丢失数据
+3. 容量较大，sessionStorage和localStorage约 5M 左右
+
+**localStorage**
+
+1. 生命周期永久生效，除非手动删除 否则关闭页面也会存在
+2. 可以多窗口（页面）共享（同一浏览器可以共享）
+3. 以键值对的形式存储使用
+
+语法
+
+- 存储数据：`localStorage.setItem(key, value)`
+- 获取数据：`localStorage.getItem(key)`
+- 删除数据：`localStorage.removeItem(key)`
+
+存储复杂数据类型存储：
+
+> 本地只能存储字符串,无法存储复杂数据类型.需要将复杂数据类型转换成JSON字符串,在存储到本地
+
+**JSON.stringify(复杂数据类型) ：**
+
+将复杂数据转换成JSON字符串 **存储** 本地存储中
+
+**JSON.parse(JSON字符串)：**
+
+将JSON字符串转换成对象 **取出** 时候使用
+
+---
+
+sessionStorage（了解）
+ 	1. 生命周期为关闭浏览器窗口
+ 	2. 在同一个窗口(页面)下数据可以共享
+ 	3. 以键值对的形式存储使用
+	4. 用法跟localStorage 基本相同
+
+#### 自定义属性
+
+固有属性：
+
+> 标签天生自带的属性 比如class id title等, 可以直接使用点语法操作
+
+自定义属性:
+
+> 由程序员自己添加的属性,在DOM对象中找不到, 无法使用点语法操作,必须使用专门的API
+
+- 获取自定义属性 ：`getAttribute('属性名')`
+- 设置自定义属性：`setAttribute('属性名', '属性值')`
+-  删除自定义属性：`removeAttribute('属性名') `
+
+data-自定义属性：
+
+> 传统的自定义属性没有专门的定义规则,开发者随意定值,不够规范,所以在html5中推出来了专门的data-自定义属性 在标签上一律以data-开头
+
+在DOM对象上一律以dataset对象方式获取
+
+![image-20220713122248633](https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220713122248633.png)
