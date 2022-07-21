@@ -427,3 +427,211 @@ console.log(re) //[62,61,56,36]
 参数：currentValue 必须写， index 可选
 因为返回新数组，所以不会影响原数组
 
+## 对象创建方法
+
+- 利用字面量创建
+
+  ```javascript
+  const obj = {
+      name:'叶湘伦',
+      age:18
+  }
+  ```
+
+- 利用 new Object 创建对象
+
+  ```javascript
+  const obj = new Object({
+      name:'叶湘伦',
+      age:18
+  })
+  ```
+
+- 利用构造函数创建
+
+  ```javascript
+  // 构造函数
+  function Obj(name,age){
+      this.name = name
+      this.age = age
+  }
+  //创建一个对象
+  const Stu = new Obj('叶湘伦'，18)
+  ```
+
+  **注意：**
+
+  - 语法：大写字母开头的函数
+  - 约定：它们的命名以大写字母开头。只能由 "new" 操作符来执行。
+
+  **说明：**
+
+  1. 使用 new 关键字调用函数的行为被称为实例化
+  2. 实例化构造函数时没有参数可以省略（）
+  3. 构造函数内部不用写 return ，返回值即为新建的对象
+  4. new Object（） new Date（） 也是实例化构造函数
+
+  **实列化执行过程：**
+
+  1. 创建一个新空对象
+  2. 构造函数 this 指向新对象
+  3. 执行构造函数代码，修改 this ，添加新的属性
+  4. 返回新的对象
+
+### 实例对象
+
+> 通过构造函数创建的对象称为实例对象，实例对象中的属性和方法称为实例成员
+
+```javascript
+// 构造函数
+function Obj(name,age){
+    //构造函数内部的 this 就是实例对象
+    //实例对象中动态添加属性
+    this.name = name
+    this.age = age
+      //实例对象中动态添加方法
+    this.sayHi = function () {
+        console.log('hi')
+    }
+}
+//实例化 ，Stu 是实列对象
+// Stu 实际就是构造函数内部的 this
+const Stu = new Obj('叶湘伦'，18)
+//访问实例属性
+console.log(Stu.name)
+//调用实列方法
+Stu.sayHi()
+```
+
+说明：
+1. 实例对象的属性和方法即为实例成员
+2. 为构造函数传入参数，动态创建结构相同但值不同的对象
+3. 构造函数创建的实例对象彼此独立互不影响。
+
+**静态成员：**
+
+>在 JavaScript 中底层函数本质上也是对象类型，因此允许直接为函数动态添加属性或方法，构造函数的属性和方法被称为静态成员。
+
+```javascript
+// 构造函数
+function Obj(name,age){
+   //实例成员
+}
+//静态属性
+Obj.eyes = 2 
+Obj.arms = 2
+//静态方法
+Obj.walk = funtion () {
+    console.log('走路中')
+    //this 指向 person
+    console.log(this.eyes) 
+}
+```
+
+总结：
+
+1. 静态成员指的是添加到构造函数本身的属性和方法
+2. 一般公共特征的属性或方法静态成员设置为静态成员
+3. 静态成员方法中的 `this` 指向构造函数本身
+
+
+
+## 内置构造函数
+
+ 在 JavaScript 中**最主要**的数据类型有 6 种，分别是字符串、数值、布尔、undefined、null 和 对象，常见的对象类型数据包括数组和普通对象。其中字符串、数值、布尔、undefined、null 也被称为简单类型或基础类型，对象也被称为引用类型。
+
+在 JavaScript 内置了一些构造函数，绝大部的数据处理都是基于这些构造函数实现的，JavaScript 基础阶段学习的 `Date` 就是内置的构造函数。
+
+引用类型：
+
+`Object` :
+
+三个常用静态方法（静态方法就是只有构造函数Object可以调用的）
+
+`Object.keys` 静态方法获取对象中所有属性（键）
+
+`Object.values` 静态方法获取对象中所有属性值
+
+`Object.assign` 静态方法常用于对象拷贝
+
+```javascript
+//Object.keys
+const obj = {name:'叶湘伦',age:18}
+const arr = Object.key(obj)
+console.log(arr)  // ['name','age']  返回是一个数组
+//Object.values
+const arr2 =Object.values(obj)
+console.log(arr2)  // ['叶湘伦',18]  返回是一个数组
+//Object.assign
+const obj2 = {}
+Object.assign(obj2,obj)
+console.log(obj2)  // {name:'叶湘伦',age:18}
+//使用：经常使用的场景给对象添加属性
+Object.assign(obj,{sex:'男'})
+console.log(arr)  // {name:'叶湘伦',age:18,sex:'男'}
+```
+
+---
+
+`Array` :
+
+数组常见实例方法-核心方法
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220721112028550.png" alt="image-20220721112028550" style="zoom:150%;" />
+
+| 方法    | 作用     | 说明                                                         |
+| ------- | -------- | ------------------------------------------------------------ |
+| forEach | 遍历数组 | 不返回值，用于不改变值，经常用于查找打印输出值               |
+| filter  | 过滤数组 | 筛选数组元素，并生成新数组                                   |
+| map     | 迭代数组 | 返回新数组，新数组里面的元素是处理之后的值，经常用于处理数据 |
+| reduce  | 累积器   | 返回函数累计处理的结果，经常用于求和等                       |
+
+总结：
+
+<img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220721115506798.png" alt="image-20220721115506798" style="zoom:150%;" />
+
+1. 推荐使用字面量方式声明数组，而不是 `Array` 构造函数
+
+2. 实例方法 `forEach` 用于遍历数组，替代 `for` 循环 (重点)
+
+3. 实例方法 `filter` 过滤数组单元值，生成新数组(重点)
+
+4. 实例方法 `map` 迭代原数组，生成新数组(重点)
+
+5. 实例方法 `join` 数组元素拼接为字符串，返回字符串(重点)
+
+6. 实例方法 `find` 查找元素， 返回符合测试条件的第一个数组元素值，如果没有符合条件的则返回 undefined(重点)
+
+7. 实例方法`every` 检测数组所有元素是否都符合指定条件，如果**所有元素**都通过检测返回 true，否则返回 false(重点)
+
+8. 实例方法`some` 检测数组中的元素是否满足指定条件 **如果数组中有**元素满足条件返回 true，否则返回 false
+
+9. 实例方法 `concat` 合并两个数组，返回生成新数组
+
+10. 实例方法 `sort` 对原数组单元值排序
+
+11. 实例方法 `splice` 删除或替换原数组单元
+
+12. 实例方法 `reverse` 反转数组
+
+13. 实例方法 `findIndex` 查找元素的索引值
+
+    
+
+`String`：
+
+总结：
+
+1. 实例属性 `length` 用来获取字符串的度长(重点)
+2. 实例方法 `split('分隔符')` 用来将字符串拆分成数组(重点)
+3. 实例方法 `substring（需要截取的第一个字符的索引[,结束的索引号]）` 用于字符串截取(重点)
+4. 实例方法 `startsWith(检测字符串[, 检测位置索引号])` 检测是否以某字符开头(重点)
+5. 实例方法 `includes(搜索的字符串[, 检测位置索引号])` 判断一个字符串是否包含在另一个字符串中，根据情况返回 true 或 false(重点)
+6. 实例方法 `toUpperCase` 用于将字母转换成大写
+7. 实例方法 `toLowerCase` 用于将就转换成小写
+8. 实例方法 `indexOf` 检测是否包含某字符
+9. 实例方法 `endsWith` 检测是否以某字符结尾
+10. 实例方法 `replace` 用于替换字符串，支持正则匹配
+11. 实例方法 `match` 用于查找字符串，支持正则匹配
+
+注：String 也可以当做普通函数使用，这时它的作用是强制转换成字符串数据类型。
