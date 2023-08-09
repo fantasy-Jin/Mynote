@@ -1,17 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-07-30T05:44:58.614Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="JWxP9V0jJoDe6JIrF22W" version="21.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-09T15:16:47.491Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="4W3X18ltJofXK8t_9KMO" version="21.6.6" type="github">
   <diagram name="第 1 页" id="zxa8kRrm9WGZQYI5S8br">
-    <mxGraphModel dx="548" dy="306" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="794" dy="443" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="R5HJx99CSs3_G7NtO2Lx-9" value="" style="shape=tee;whiteSpace=wrap;html=1;dx=6;dy=7;fillColor=#f5f5f5;strokeColor=none;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="304" y="913" width="83" height="38" as="geometry" />
-        </mxCell>
         <mxCell id="cZb_3BcDoHcY1prgdpEC-1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D4E1F5;gradientColor=none;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="70" y="120" width="420" height="270" as="geometry" />
-        </mxCell>
-        <mxCell id="R5HJx99CSs3_G7NtO2Lx-8" value="" style="shape=tee;whiteSpace=wrap;html=1;dx=6;dy=7;fillColor=#f5f5f5;strokeColor=none;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="97" y="913" width="83" height="38" as="geometry" />
         </mxCell>
         <mxCell id="cZb_3BcDoHcY1prgdpEC-4" value="jvm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;" parent="1" vertex="1">
           <mxGeometry x="110" y="120" width="70" height="30" as="geometry" />
@@ -84,17 +78,29 @@
         <mxCell id="cZb_3BcDoHcY1prgdpEC-28" value="getClass()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="220" y="250" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="R5HJx99CSs3_G7NtO2Lx-1" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#9289E1;strokeColor=none;" vertex="1" parent="1">
-          <mxGeometry x="140" y="905" width="203" height="19" as="geometry" />
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;servlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="135" y="660" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="R5HJx99CSs3_G7NtO2Lx-4" value="&lt;h2&gt;&lt;font color=&quot;#9289e1&quot;&gt;EDU&lt;/font&gt;&lt;/h2&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="140" y="875" width="60" height="30" as="geometry" />
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="AneiGNn3GZLU3Ph9zybu-2" target="AneiGNn3GZLU3Ph9zybu-1">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="R5HJx99CSs3_G7NtO2Lx-12" value="2021" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f0e6e6;fontFamily=Helvetica;fontSize=14;labelBorderColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
-          <mxGeometry x="109.75" y="951" width="57.5" height="28" as="geometry" />
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;GenericServlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="135" y="772" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="R5HJx99CSs3_G7NtO2Lx-16" value="now" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f0e6e6;fontFamily=Helvetica;fontSize=14;labelBorderColor=none;labelBackgroundColor=none;" vertex="1" parent="1">
-          <mxGeometry x="316.75" y="951" width="57.5" height="28" as="geometry" />
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AneiGNn3GZLU3Ph9zybu-3" target="AneiGNn3GZLU3Ph9zybu-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;HttpServlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="135" y="882" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Servlet体系根接口&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="675.5" width="132" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Servlet抽象实现类&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="787.5" width="132" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;封装Http协议的servlet实现类&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="298" y="903" width="197" height="29" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
