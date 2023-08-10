@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-08-09T15:16:47.491Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="4W3X18ltJofXK8t_9KMO" version="21.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-10T03:44:03.660Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="Isot-TU4G-i5vFy2ZRZA" version="21.6.7" type="github">
   <diagram name="第 1 页" id="zxa8kRrm9WGZQYI5S8br">
-    <mxGraphModel dx="794" dy="443" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="794" dy="443" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -78,29 +78,96 @@
         <mxCell id="cZb_3BcDoHcY1prgdpEC-28" value="getClass()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="220" y="250" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;servlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
-          <mxGeometry x="135" y="660" width="120" height="60" as="geometry" />
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;servlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="564" y="274" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="AneiGNn3GZLU3Ph9zybu-2" target="AneiGNn3GZLU3Ph9zybu-1">
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;dashed=1;" parent="1" source="AneiGNn3GZLU3Ph9zybu-2" target="AneiGNn3GZLU3Ph9zybu-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;GenericServlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="135" y="772" width="120" height="60" as="geometry" />
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;GenericServlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="564" y="386" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AneiGNn3GZLU3Ph9zybu-3" target="AneiGNn3GZLU3Ph9zybu-2">
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" target="AneiGNn3GZLU3Ph9zybu-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="624" y="496" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;HttpServlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="569" y="498" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Servlet体系根接口&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="759" y="289.5" width="132" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Servlet抽象实现类&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="759" y="401.5" width="132" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="AneiGNn3GZLU3Ph9zybu-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;封装Http协议的servlet实现类&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="727" y="517" width="197" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-1" target="Q26XlLEVTCVS61FyrZEw-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-3" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;HttpServlet&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="135" y="882" width="120" height="60" as="geometry" />
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;浏览器请求&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="84" y="504" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-6" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Servlet体系根接口&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="330" y="675.5" width="132" height="29" as="geometry" />
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-2" target="Q26XlLEVTCVS61FyrZEw-3">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Servlet抽象实现类&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="330" y="787.5" width="132" height="29" as="geometry" />
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;servlet&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="344" y="438" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="AneiGNn3GZLU3Ph9zybu-9" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;封装Http协议的servlet实现类&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="298" y="903" width="197" height="29" as="geometry" />
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-3" target="Q26XlLEVTCVS61FyrZEw-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-3" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;另一个servlet&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="344" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-8" value="自己处理完，转发给另一个servlet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="406" y="498" width="115" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-9" value="处理完响应回去" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="165" y="594" width="129" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="298" y="408" width="224" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-11" value="服务器端" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="408" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-12" target="Q26XlLEVTCVS61FyrZEw-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="328.66668701171875" y="855" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-12" target="Q26XlLEVTCVS61FyrZEw-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-12" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;浏览器&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="65" y="825" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-13" target="Q26XlLEVTCVS61FyrZEw-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-13" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;servlet&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="466" y="825" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="Q26XlLEVTCVS61FyrZEw-14" target="Q26XlLEVTCVS61FyrZEw-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-14" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;另一个servlet&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="464" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-16" value="第一次请求" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="263" y="820" width="89" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-18" value="第一次请求的响应，告诉浏览器要去请求另外一个servlet" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="226" y="872" width="226" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-20" value="第二次请求" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="122.5" y="963" width="107" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Q26XlLEVTCVS61FyrZEw-22" value="处理完第二个请求，响应回去" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="132" y="1021" width="195" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
